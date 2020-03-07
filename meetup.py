@@ -41,8 +41,7 @@ def find_meetup_event(meetup_username, meetup_pw, headless, attempts):
     submit_creds_btn = driver.find_element_by_xpath('//input[@id="loginFormSubmit"]').click()
 
     driver.get(r'https://www.meetup.com/Alexandria-Indoor-Volleyball/')
-    #search_date = get_next_sunday()
-    search_date = 'Mon, Mar 21'
+    search_date = get_next_sunday()
     upcoming_events = driver.find_elements_by_xpath('//div[@class="chunk"]')
     rsvp_success = False
 
